@@ -1,0 +1,32 @@
+def sum(x,y):
+    print (float (x + y))
+
+def subtract(x,y):
+    print(float (x - y))
+
+def multiply(x,y):
+    print(float(x * y))
+
+def divsion(x,y):
+    if y == 0:
+        print('Division not possible')
+    else:
+        print(round(float( x / y),1))
+
+a, b, c = input('Enter expressions: ').split(' ')
+
+x = int(a)
+y = int(c)
+symbol  = b
+
+match symbol:
+    case '+':
+        sum(x , y)
+    case '-':
+        subtract(x , y)
+    case '*':
+        multiply(x , y)
+    case '/':
+        divsion(x , y)
+    case _:
+        print('Invalid Operator')
